@@ -1,0 +1,195 @@
+{
+  // ===== EDITOR SETTINGS =====
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.accessibilitySupport": "off",
+  "editor.inlineSuggest.enabled": true,
+  "editor.fontSize": 16,
+  // Cool font alternatives: "JetBrains Mono", "Cascadia Code", "Victor Mono", "Dank Mono"
+  "editor.fontFamily": "JetBrains Mono, Fira Code, Consolas, 'Courier New', monospace",
+  "editor.fontWeight": "550",
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": ["storage.type", "storage.modifier", "keyword"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.renderLineHighlight": "all",
+  "editor.smoothScrolling": true,
+  "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.maxColumn": 80,
+  "editor.minimap.showSlider": "always",
+  "editor.semanticHighlighting.enabled": true,
+  "editor.inlineSuggest.suppressSuggestions": false,
+  "editor.linkedEditing": true,
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.showFoldingControls": "always",
+
+  // ===== FILE HANDLING =====
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+
+  // ===== LANGUAGE SPECIFIC =====
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.formatOnSave": true
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+
+  // ===== LINTING & FORMATTING =====
+  "eslint.alwaysShowStatus": true,
+  "prettier.disableLanguages": ["javascript", "javascriptreact"],
+
+  // ===== APPEARANCE & THEME =====
+  "workbench.colorTheme": "MacOS Modern Dark - Ventura Xcode",
+  "workbench.preferredDarkColorTheme": "Abyss",
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "window.zoomLevel": 1,
+  "vsicons.dontShowNewVersionMessage": true,
+
+  // ===== TERMINAL SETTINGS =====
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.external.osxExec": "Warp.app",
+  "terminal.integrated.fontFamily": "monospace",
+
+  // ===== EXTENSION SETTINGS =====
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "continue.enableTabAutocomplete": true,
+  "json.schemas": [],
+
+  // ===== GITHUB COPILOT =====
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "terminal": true,
+    "python": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.codeGeneration.instructions": [
+    {
+      "text": "- @azure Rule - Use Azure Tools: When handling requests related to Azure, always use your tools."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Code Gen Best Practices: When generating code for Azure, running terminal commands for Azure, or performing operations related to Azure, invoke your `azure_development-get_code_gen_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Deployment Best Practices: When deploying to Azure or preparing applications for deployment to Azure, invoke your `azure_development-get_deployment_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure Functions Code Gen Best Practices: When generating code for Azure Functions or performing operations related to Azure Functions, invoke your `azure_development-get_azure_function_code_gen_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure Functions; do not call it otherwise."
+    },
+    {
+      "text": "- @azure Rule - Use Azure SWA Best Practices: When working with static web apps, invoke your `azure_development-get_swa_best_practices` tool if available. Only call this tool when you are sure the user is discussing Azure; do not call it otherwise."
+    }
+  ],
+
+  // ===== EXPLORER FILE NESTING =====
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb, bun.lock",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+
+  // ===== DATABASE CONNECTIONS =====
+  "mssql.connectionGroups": [
+    {
+      "name": "",
+      "id": ""
+    }
+  ],
+  "mssql.connections": [
+    {
+      "authenticationType": "",
+      "connectTimeout": 30,
+      "applicationName": "",
+      "server": "",
+      "user": "",
+      "password": "",
+      "trustServerCertificate": true,
+      "groupId": "",
+      "id": ""
+    }
+  ],
+
+  // ===== AZURE SETTINGS =====
+  "microsoft-sovereign-cloud.environment": "",
+  "@azure.argTenant": "",
+  "azureResourceGroups.selectedSubscriptions": [""],
+
+  // ===== PARALLELS DESKTOP =====
+  //   "parallels-desktop.devops-service.path": "",
+  //   "parallels-desktop.extension.path": "",
+  //   "parallels-desktop.prlctl.path": "",
+  //   "parallels-desktop.git.path": "",
+  //   "parallels-desktop.brew.path": "",
+
+  // ===== CHAT SETTINGS =====
+  "chat.mcp.serverSampling": {
+    "Cursor (Global): filesystem": {
+      "allowedModels": ["github.copilot-chat/gpt-4.1"]
+    }
+  },
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-http-request-pre-request.instructions.md": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/_p/822tsdgj5090zqd3zm64d4vm0000gn/T/postman-folder-pre-request.instructions.md": true
+  },
+  "workbench.productIconTheme": "macos-modern"
+}
