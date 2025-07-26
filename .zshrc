@@ -1,3 +1,7 @@
+# ----------------.zshrc config------------------------
+
+
+# ---------------------- Environment Variables ----------------------
 export AZURE_COSMOS_DB_HOST=""
 export AZURE_COSMOS_DB_KEY=""  
 export AZURE_COSMOS_DB_NAME=""
